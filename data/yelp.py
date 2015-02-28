@@ -38,7 +38,7 @@ class BusinessReviews(Business):
     def load_data(self):
         self.read_business()
         self.read_reviews()
-        #self.read_tips()
+        self.read_tips()
 
     '''
     This method reads businesses data.

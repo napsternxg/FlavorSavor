@@ -81,7 +81,7 @@
         "reviews": 8, 
         "likes": 0, 
         "stars": 28, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -230,7 +230,7 @@
         "reviews": 33, 
         "likes": 0, 
         "stars": 113, 
-        "tips": 0
+        "tips": 10
       }, 
       "flavors": {
         "sweet": {
@@ -375,7 +375,7 @@
         "reviews": 33, 
         "likes": 0, 
         "stars": 148, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -481,7 +481,7 @@
         "reviews": 5, 
         "likes": 0, 
         "stars": 15, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -907,7 +907,7 @@
         "reviews": 19, 
         "likes": 0, 
         "stars": 92, 
-        "tips": 0
+        "tips": 4
       }, 
       "flavors": {
         "sweet": {
@@ -1248,21 +1248,21 @@
     }, 
     "flavor_sharer": {
       "aggregate": {
-        "count": 189, 
+        "count": 193, 
         "useful_votes": 247, 
         "reviews": 423, 
-        "likes": 0, 
+        "likes": 1, 
         "stars": 1895, 
-        "tips": 0
+        "tips": 68
       }, 
       "flavors": {
         "sweet": {
-          "count": 174, 
+          "count": 177, 
           "useful_votes": 89, 
           "reviews": 124, 
           "likes": 0, 
           "stars": 569, 
-          "tips": 0
+          "tips": 2
         }, 
         "salty": {
           "count": 1, 
@@ -1289,12 +1289,12 @@
           "tips": 0
         }, 
         "spicy": {
-          "count": 13, 
+          "count": 14, 
           "useful_votes": 17, 
           "reviews": 12, 
           "likes": 0, 
           "stars": 50, 
-          "tips": 0
+          "tips": 1
         }
       }
     }, 
@@ -1368,7 +1368,7 @@
         "reviews": 38, 
         "likes": 0, 
         "stars": 124, 
-        "tips": 0
+        "tips": 4
       }, 
       "flavors": {
         "sweet": {
@@ -1602,21 +1602,21 @@
     }, 
     "flavor_sharer": {
       "aggregate": {
-        "count": 13, 
+        "count": 14, 
         "useful_votes": 55, 
         "reviews": 91, 
         "likes": 0, 
         "stars": 331, 
-        "tips": 0
+        "tips": 18
       }, 
       "flavors": {
         "sweet": {
-          "count": 12, 
+          "count": 13, 
           "useful_votes": 6, 
           "reviews": 11, 
           "likes": 0, 
           "stars": 48, 
-          "tips": 0
+          "tips": 1
         }, 
         "salty": {
           "count": 1, 
@@ -1881,7 +1881,7 @@
         "reviews": 65, 
         "likes": 0, 
         "stars": 256, 
-        "tips": 0
+        "tips": 19
       }, 
       "flavors": {
         "sweet": {
@@ -2624,7 +2624,7 @@
         "reviews": 6, 
         "likes": 0, 
         "stars": 22, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -2850,7 +2850,7 @@
         "reviews": 156, 
         "likes": 0, 
         "stars": 558, 
-        "tips": 0
+        "tips": 12
       }, 
       "flavors": {
         "sweet": {
@@ -2967,7 +2967,7 @@
         "reviews": 40, 
         "likes": 0, 
         "stars": 142, 
-        "tips": 0
+        "tips": 5
       }, 
       "flavors": {
         "sweet": {
@@ -3111,7 +3111,7 @@
         "reviews": 36, 
         "likes": 0, 
         "stars": 105, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -3226,7 +3226,7 @@
         "reviews": 10, 
         "likes": 0, 
         "stars": 28, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -3556,7 +3556,7 @@
         "reviews": 49, 
         "likes": 0, 
         "stars": 203, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -3686,7 +3686,7 @@
         "reviews": 7, 
         "likes": 0, 
         "stars": 21, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -3946,7 +3946,7 @@
         "reviews": 36, 
         "likes": 0, 
         "stars": 105, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -4175,7 +4175,7 @@
         "reviews": 17, 
         "likes": 0, 
         "stars": 71, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -4319,7 +4319,7 @@
         "reviews": 20, 
         "likes": 0, 
         "stars": 69, 
-        "tips": 0
+        "tips": 6
       }, 
       "flavors": {
         "sweet": {
@@ -4466,7 +4466,7 @@
         "reviews": 28, 
         "likes": 0, 
         "stars": 121, 
-        "tips": 0
+        "tips": 4
       }, 
       "flavors": {
         "sweet": {
@@ -4551,7 +4551,7 @@
         "reviews": 7, 
         "likes": 0, 
         "stars": 15, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -4992,7 +4992,7 @@
         "reviews": 61, 
         "likes": 0, 
         "stars": 259, 
-        "tips": 0
+        "tips": 8
       }, 
       "flavors": {
         "sweet": {
@@ -5252,7 +5252,7 @@
         "reviews": 65, 
         "likes": 0, 
         "stars": 235, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -5526,7 +5526,7 @@
         "reviews": 80, 
         "likes": 0, 
         "stars": 289, 
-        "tips": 0
+        "tips": 6
       }, 
       "flavors": {
         "sweet": {
@@ -5990,9 +5990,9 @@
         "count": 30, 
         "useful_votes": 87, 
         "reviews": 117, 
-        "likes": 0, 
+        "likes": 1, 
         "stars": 439, 
-        "tips": 0
+        "tips": 16
       }, 
       "flavors": {
         "sweet": {
@@ -6140,7 +6140,7 @@
         "reviews": 61, 
         "likes": 0, 
         "stars": 192, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -6437,7 +6437,7 @@
         "reviews": 98, 
         "likes": 0, 
         "stars": 375, 
-        "tips": 0
+        "tips": 8
       }, 
       "flavors": {
         "sweet": {
@@ -6747,7 +6747,7 @@
         "reviews": 55, 
         "likes": 0, 
         "stars": 245, 
-        "tips": 0
+        "tips": 12
       }, 
       "flavors": {
         "sweet": {
@@ -6892,7 +6892,7 @@
         "reviews": 50, 
         "likes": 0, 
         "stars": 170, 
-        "tips": 0
+        "tips": 8
       }, 
       "flavors": {
         "sweet": {
@@ -7036,7 +7036,7 @@
         "reviews": 27, 
         "likes": 0, 
         "stars": 95, 
-        "tips": 0
+        "tips": 4
       }, 
       "flavors": {
         "sweet": {
@@ -7125,7 +7125,7 @@
         "reviews": 2, 
         "likes": 0, 
         "stars": 3, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -7240,7 +7240,7 @@
         "reviews": 29, 
         "likes": 0, 
         "stars": 81, 
-        "tips": 0
+        "tips": 6
       }, 
       "flavors": {
         "sweet": {
@@ -7384,7 +7384,7 @@
         "reviews": 51, 
         "likes": 0, 
         "stars": 210, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -7524,7 +7524,7 @@
         "reviews": 26, 
         "likes": 0, 
         "stars": 96, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -7810,7 +7810,7 @@
         "reviews": 76, 
         "likes": 0, 
         "stars": 309, 
-        "tips": 0
+        "tips": 6
       }, 
       "flavors": {
         "sweet": {
@@ -7912,7 +7912,7 @@
         "reviews": 8, 
         "likes": 0, 
         "stars": 29, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -8144,7 +8144,7 @@
         "reviews": 8, 
         "likes": 0, 
         "stars": 23, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -8287,7 +8287,7 @@
         "reviews": 33, 
         "likes": 0, 
         "stars": 134, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -8526,7 +8526,7 @@
         "reviews": 48, 
         "likes": 0, 
         "stars": 215, 
-        "tips": 0
+        "tips": 6
       }, 
       "flavors": {
         "sweet": {
@@ -8642,7 +8642,7 @@
         "reviews": 56, 
         "likes": 0, 
         "stars": 188, 
-        "tips": 0
+        "tips": 4
       }, 
       "flavors": {
         "sweet": {
@@ -8857,7 +8857,7 @@
         "reviews": 11, 
         "likes": 0, 
         "stars": 32, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -9014,7 +9014,7 @@
         "reviews": 23, 
         "likes": 0, 
         "stars": 64, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -9160,7 +9160,7 @@
         "reviews": 35, 
         "likes": 0, 
         "stars": 126, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -9406,7 +9406,7 @@
         "reviews": 51, 
         "likes": 0, 
         "stars": 191, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -9549,7 +9549,7 @@
         "reviews": 13, 
         "likes": 0, 
         "stars": 31, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -9699,7 +9699,7 @@
         "reviews": 80, 
         "likes": 0, 
         "stars": 282, 
-        "tips": 0
+        "tips": 19
       }, 
       "flavors": {
         "sweet": {
@@ -9846,7 +9846,7 @@
         "reviews": 33, 
         "likes": 0, 
         "stars": 116, 
-        "tips": 0
+        "tips": 6
       }, 
       "flavors": {
         "sweet": {
@@ -9989,7 +9989,7 @@
         "reviews": 4, 
         "likes": 0, 
         "stars": 13, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -10214,7 +10214,7 @@
         "reviews": 58, 
         "likes": 0, 
         "stars": 210, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -10470,7 +10470,7 @@
         "reviews": 23, 
         "likes": 0, 
         "stars": 69, 
-        "tips": 0
+        "tips": 5
       }, 
       "flavors": {
         "sweet": {
@@ -10618,7 +10618,7 @@
         "reviews": 68, 
         "likes": 0, 
         "stars": 194, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -10856,7 +10856,7 @@
         "reviews": 24, 
         "likes": 0, 
         "stars": 94, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -10969,7 +10969,7 @@
         "reviews": 42, 
         "likes": 0, 
         "stars": 161, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -11185,21 +11185,21 @@
     }, 
     "flavor_sharer": {
       "aggregate": {
-        "count": 27, 
+        "count": 28, 
         "useful_votes": 125, 
         "reviews": 169, 
         "likes": 0, 
         "stars": 652, 
-        "tips": 0
+        "tips": 19
       }, 
       "flavors": {
         "sweet": {
-          "count": 23, 
+          "count": 24, 
           "useful_votes": 20, 
           "reviews": 21, 
           "likes": 0, 
           "stars": 81, 
-          "tips": 0
+          "tips": 1
         }, 
         "salty": {
           "count": 0, 
@@ -11336,7 +11336,7 @@
         "reviews": 19, 
         "likes": 0, 
         "stars": 60, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -11480,7 +11480,7 @@
         "reviews": 38, 
         "likes": 0, 
         "stars": 149, 
-        "tips": 0
+        "tips": 5
       }, 
       "flavors": {
         "sweet": {
@@ -11619,7 +11619,7 @@
         "reviews": 48, 
         "likes": 0, 
         "stars": 174, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -11758,7 +11758,7 @@
         "reviews": 27, 
         "likes": 0, 
         "stars": 108, 
-        "tips": 0
+        "tips": 6
       }, 
       "flavors": {
         "sweet": {
@@ -11898,7 +11898,7 @@
         "reviews": 28, 
         "likes": 0, 
         "stars": 110, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -12032,7 +12032,7 @@
         "reviews": 30, 
         "likes": 0, 
         "stars": 84, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -12174,7 +12174,7 @@
         "reviews": 19, 
         "likes": 0, 
         "stars": 67, 
-        "tips": 0
+        "tips": 6
       }, 
       "flavors": {
         "sweet": {
@@ -12289,7 +12289,7 @@
         "reviews": 7, 
         "likes": 0, 
         "stars": 17, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -12530,7 +12530,7 @@
         "reviews": 49, 
         "likes": 0, 
         "stars": 172, 
-        "tips": 0
+        "tips": 7
       }, 
       "flavors": {
         "sweet": {
@@ -12795,7 +12795,7 @@
         "reviews": 22, 
         "likes": 0, 
         "stars": 85, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -12937,7 +12937,7 @@
         "reviews": 37, 
         "likes": 0, 
         "stars": 152, 
-        "tips": 0
+        "tips": 4
       }, 
       "flavors": {
         "sweet": {
@@ -13166,7 +13166,7 @@
         "reviews": 58, 
         "likes": 0, 
         "stars": 243, 
-        "tips": 0
+        "tips": 15
       }, 
       "flavors": {
         "sweet": {
@@ -13460,7 +13460,7 @@
         "reviews": 42, 
         "likes": 0, 
         "stars": 117, 
-        "tips": 0
+        "tips": 7
       }, 
       "flavors": {
         "sweet": {
@@ -13608,7 +13608,7 @@
         "reviews": 56, 
         "likes": 0, 
         "stars": 204, 
-        "tips": 0
+        "tips": 7
       }, 
       "flavors": {
         "sweet": {
@@ -13723,7 +13723,7 @@
         "reviews": 11, 
         "likes": 0, 
         "stars": 27, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -13872,7 +13872,7 @@
         "reviews": 44, 
         "likes": 0, 
         "stars": 168, 
-        "tips": 0
+        "tips": 5
       }, 
       "flavors": {
         "sweet": {
@@ -14059,7 +14059,7 @@
         "reviews": 5, 
         "likes": 0, 
         "stars": 14, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -14203,7 +14203,7 @@
         "reviews": 15, 
         "likes": 0, 
         "stars": 59, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -14350,7 +14350,7 @@
         "reviews": 31, 
         "likes": 0, 
         "stars": 109, 
-        "tips": 0
+        "tips": 4
       }, 
       "flavors": {
         "sweet": {
@@ -14497,7 +14497,7 @@
         "reviews": 68, 
         "likes": 0, 
         "stars": 273, 
-        "tips": 0
+        "tips": 8
       }, 
       "flavors": {
         "sweet": {
@@ -14652,7 +14652,7 @@
         "reviews": 58, 
         "likes": 0, 
         "stars": 230, 
-        "tips": 0
+        "tips": 6
       }, 
       "flavors": {
         "sweet": {
@@ -14801,7 +14801,7 @@
         "reviews": 26, 
         "likes": 0, 
         "stars": 74, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -15013,7 +15013,7 @@
         "reviews": 51, 
         "likes": 0, 
         "stars": 181, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -15148,7 +15148,7 @@
         "reviews": 19, 
         "likes": 0, 
         "stars": 74, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -15442,7 +15442,7 @@
         "reviews": 25, 
         "likes": 0, 
         "stars": 88, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -15872,7 +15872,7 @@
         "reviews": 14, 
         "likes": 0, 
         "stars": 60, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -16015,7 +16015,7 @@
         "reviews": 26, 
         "likes": 0, 
         "stars": 75, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -16157,7 +16157,7 @@
         "reviews": 13, 
         "likes": 0, 
         "stars": 44, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -16295,7 +16295,7 @@
         "reviews": 33, 
         "likes": 0, 
         "stars": 109, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -16542,7 +16542,7 @@
         "reviews": 49, 
         "likes": 0, 
         "stars": 166, 
-        "tips": 0
+        "tips": 4
       }, 
       "flavors": {
         "sweet": {
@@ -16684,7 +16684,7 @@
         "reviews": 10, 
         "likes": 0, 
         "stars": 40, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -16828,7 +16828,7 @@
         "reviews": 22, 
         "likes": 0, 
         "stars": 73, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -16972,7 +16972,7 @@
         "reviews": 27, 
         "likes": 0, 
         "stars": 82, 
-        "tips": 0
+        "tips": 5
       }, 
       "flavors": {
         "sweet": {
@@ -17118,7 +17118,7 @@
         "reviews": 22, 
         "likes": 0, 
         "stars": 67, 
-        "tips": 0
+        "tips": 4
       }, 
       "flavors": {
         "sweet": {
@@ -17245,7 +17245,7 @@
         "reviews": 20, 
         "likes": 0, 
         "stars": 69, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -17651,7 +17651,7 @@
         "reviews": 64, 
         "likes": 0, 
         "stars": 216, 
-        "tips": 0
+        "tips": 10
       }, 
       "flavors": {
         "sweet": {
@@ -17794,7 +17794,7 @@
         "reviews": 31, 
         "likes": 0, 
         "stars": 106, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -17938,7 +17938,7 @@
         "reviews": 23, 
         "likes": 0, 
         "stars": 96, 
-        "tips": 0
+        "tips": 7
       }, 
       "flavors": {
         "sweet": {
@@ -18058,7 +18058,7 @@
         "reviews": 33, 
         "likes": 0, 
         "stars": 117, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -18201,7 +18201,7 @@
         "reviews": 20, 
         "likes": 0, 
         "stars": 57, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -18315,7 +18315,7 @@
         "reviews": 53, 
         "likes": 0, 
         "stars": 186, 
-        "tips": 0
+        "tips": 5
       }, 
       "flavors": {
         "sweet": {
@@ -18456,12 +18456,12 @@
     }, 
     "flavor_sharer": {
       "aggregate": {
-        "count": 8, 
+        "count": 9, 
         "useful_votes": 24, 
         "reviews": 37, 
         "likes": 0, 
         "stars": 133, 
-        "tips": 0
+        "tips": 5
       }, 
       "flavors": {
         "sweet": {
@@ -18497,12 +18497,12 @@
           "tips": 0
         }, 
         "spicy": {
-          "count": 3, 
+          "count": 4, 
           "useful_votes": 5, 
           "reviews": 3, 
           "likes": 0, 
           "stars": 11, 
-          "tips": 0
+          "tips": 1
         }
       }
     }, 
@@ -19061,7 +19061,7 @@
         "reviews": 15, 
         "likes": 0, 
         "stars": 46, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -19203,9 +19203,9 @@
         "count": 19, 
         "useful_votes": 43, 
         "reviews": 79, 
-        "likes": 0, 
+        "likes": 1, 
         "stars": 342, 
-        "tips": 0
+        "tips": 13
       }, 
       "flavors": {
         "sweet": {
@@ -19426,7 +19426,7 @@
         "reviews": 16, 
         "likes": 0, 
         "stars": 49, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -19562,12 +19562,12 @@
     }, 
     "flavor_sharer": {
       "aggregate": {
-        "count": 6, 
+        "count": 7, 
         "useful_votes": 46, 
         "reviews": 24, 
         "likes": 0, 
         "stars": 75, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -19579,12 +19579,12 @@
           "tips": 0
         }, 
         "salty": {
-          "count": 3, 
+          "count": 4, 
           "useful_votes": 3, 
           "reviews": 1, 
           "likes": 0, 
           "stars": 1, 
-          "tips": 0
+          "tips": 1
         }, 
         "sour": {
           "count": 0, 
@@ -19842,7 +19842,7 @@
         "reviews": 92, 
         "likes": 0, 
         "stars": 360, 
-        "tips": 0
+        "tips": 9
       }, 
       "flavors": {
         "sweet": {
@@ -19990,7 +19990,7 @@
         "reviews": 40, 
         "likes": 0, 
         "stars": 119, 
-        "tips": 0
+        "tips": 11
       }, 
       "flavors": {
         "sweet": {
@@ -20084,7 +20084,7 @@
         "reviews": 6, 
         "likes": 0, 
         "stars": 21, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -20228,7 +20228,7 @@
         "reviews": 15, 
         "likes": 0, 
         "stars": 52, 
-        "tips": 0
+        "tips": 4
       }, 
       "flavors": {
         "sweet": {
@@ -20371,7 +20371,7 @@
         "reviews": 21, 
         "likes": 0, 
         "stars": 73, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -20485,7 +20485,7 @@
         "reviews": 60, 
         "likes": 0, 
         "stars": 215, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -20744,7 +20744,7 @@
         "reviews": 51, 
         "likes": 0, 
         "stars": 190, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -20874,7 +20874,7 @@
         "reviews": 16, 
         "likes": 0, 
         "stars": 45, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -21020,7 +21020,7 @@
         "reviews": 10, 
         "likes": 0, 
         "stars": 32, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -21163,9 +21163,9 @@
         "count": 33, 
         "useful_votes": 95, 
         "reviews": 211, 
-        "likes": 0, 
+        "likes": 1, 
         "stars": 959, 
-        "tips": 0
+        "tips": 24
       }, 
       "flavors": {
         "sweet": {
@@ -21277,7 +21277,7 @@
         "reviews": 8, 
         "likes": 0, 
         "stars": 30, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -21394,7 +21394,7 @@
         "reviews": 41, 
         "likes": 0, 
         "stars": 138, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -21543,12 +21543,12 @@
     }, 
     "flavor_sharer": {
       "aggregate": {
-        "count": 20, 
+        "count": 21, 
         "useful_votes": 48, 
         "reviews": 51, 
         "likes": 0, 
         "stars": 156, 
-        "tips": 0
+        "tips": 5
       }, 
       "flavors": {
         "sweet": {
@@ -21584,12 +21584,12 @@
           "tips": 0
         }, 
         "spicy": {
-          "count": 10, 
+          "count": 11, 
           "useful_votes": 8, 
           "reviews": 7, 
           "likes": 0, 
           "stars": 23, 
-          "tips": 0
+          "tips": 1
         }
       }
     }, 
@@ -21659,7 +21659,7 @@
         "reviews": 11, 
         "likes": 0, 
         "stars": 19, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -21781,7 +21781,7 @@
         "reviews": 9, 
         "likes": 0, 
         "stars": 34, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -21924,7 +21924,7 @@
         "reviews": 21, 
         "likes": 0, 
         "stars": 77, 
-        "tips": 0
+        "tips": 4
       }, 
       "flavors": {
         "sweet": {
@@ -22036,7 +22036,7 @@
         "reviews": 16, 
         "likes": 0, 
         "stars": 53, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -22321,7 +22321,7 @@
         "reviews": 15, 
         "likes": 0, 
         "stars": 48, 
-        "tips": 0
+        "tips": 8
       }, 
       "flavors": {
         "sweet": {
@@ -22473,7 +22473,7 @@
         "reviews": 123, 
         "likes": 0, 
         "stars": 456, 
-        "tips": 0
+        "tips": 13
       }, 
       "flavors": {
         "sweet": {
@@ -22612,12 +22612,12 @@
     }, 
     "flavor_sharer": {
       "aggregate": {
-        "count": 58, 
+        "count": 60, 
         "useful_votes": 134, 
         "reviews": 155, 
         "likes": 0, 
         "stars": 680, 
-        "tips": 0
+        "tips": 29
       }, 
       "flavors": {
         "sweet": {
@@ -22653,12 +22653,12 @@
           "tips": 0
         }, 
         "spicy": {
-          "count": 23, 
+          "count": 25, 
           "useful_votes": 15, 
           "reviews": 17, 
           "likes": 0, 
           "stars": 76, 
-          "tips": 0
+          "tips": 2
         }
       }
     }, 
@@ -22727,12 +22727,12 @@
     }, 
     "flavor_sharer": {
       "aggregate": {
-        "count": 12, 
+        "count": 13, 
         "useful_votes": 55, 
         "reviews": 64, 
         "likes": 0, 
         "stars": 238, 
-        "tips": 0
+        "tips": 8
       }, 
       "flavors": {
         "sweet": {
@@ -22768,12 +22768,12 @@
           "tips": 0
         }, 
         "spicy": {
-          "count": 5, 
+          "count": 6, 
           "useful_votes": 3, 
           "reviews": 5, 
           "likes": 0, 
           "stars": 15, 
-          "tips": 0
+          "tips": 1
         }
       }
     }, 
@@ -22877,7 +22877,7 @@
         "reviews": 113, 
         "likes": 0, 
         "stars": 441, 
-        "tips": 0
+        "tips": 17
       }, 
       "flavors": {
         "sweet": {
@@ -22991,7 +22991,7 @@
         "reviews": 37, 
         "likes": 0, 
         "stars": 124, 
-        "tips": 0
+        "tips": 5
       }, 
       "flavors": {
         "sweet": {
@@ -23106,7 +23106,7 @@
         "reviews": 70, 
         "likes": 0, 
         "stars": 238, 
-        "tips": 0
+        "tips": 5
       }, 
       "flavors": {
         "sweet": {
@@ -23225,7 +23225,7 @@
         "reviews": 13, 
         "likes": 0, 
         "stars": 34, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -23456,12 +23456,12 @@
     }, 
     "flavor_sharer": {
       "aggregate": {
-        "count": 1, 
+        "count": 2, 
         "useful_votes": 5, 
         "reviews": 15, 
         "likes": 0, 
         "stars": 49, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -23497,12 +23497,12 @@
           "tips": 0
         }, 
         "spicy": {
-          "count": 1, 
+          "count": 2, 
           "useful_votes": 0, 
           "reviews": 1, 
           "likes": 0, 
           "stars": 5, 
-          "tips": 0
+          "tips": 1
         }
       }
     }, 
@@ -23580,7 +23580,7 @@
         "reviews": 152, 
         "likes": 0, 
         "stars": 538, 
-        "tips": 0
+        "tips": 25
       }, 
       "flavors": {
         "sweet": {
@@ -23764,7 +23764,7 @@
         "reviews": 4, 
         "likes": 0, 
         "stars": 17, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -23911,7 +23911,7 @@
         "reviews": 21, 
         "likes": 0, 
         "stars": 82, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -24208,7 +24208,7 @@
         "reviews": 12, 
         "likes": 0, 
         "stars": 32, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -24359,7 +24359,7 @@
         "reviews": 91, 
         "likes": 0, 
         "stars": 350, 
-        "tips": 0
+        "tips": 11
       }, 
       "flavors": {
         "sweet": {
@@ -24758,7 +24758,7 @@
         "reviews": 31, 
         "likes": 0, 
         "stars": 108, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -24873,7 +24873,7 @@
         "reviews": 18, 
         "likes": 0, 
         "stars": 63, 
-        "tips": 0
+        "tips": 5
       }, 
       "flavors": {
         "sweet": {
@@ -25229,7 +25229,7 @@
         "reviews": 25, 
         "likes": 0, 
         "stars": 72, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -25475,7 +25475,7 @@
         "reviews": 4, 
         "likes": 0, 
         "stars": 4, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -25592,7 +25592,7 @@
         "reviews": 28, 
         "likes": 0, 
         "stars": 88, 
-        "tips": 0
+        "tips": 7
       }, 
       "flavors": {
         "sweet": {
@@ -25826,7 +25826,7 @@
         "reviews": 21, 
         "likes": 0, 
         "stars": 73, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -25941,7 +25941,7 @@
         "reviews": 12, 
         "likes": 0, 
         "stars": 25, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -26616,7 +26616,7 @@
         "reviews": 42, 
         "likes": 0, 
         "stars": 135, 
-        "tips": 0
+        "tips": 7
       }, 
       "flavors": {
         "sweet": {
@@ -26762,7 +26762,7 @@
         "reviews": 78, 
         "likes": 0, 
         "stars": 320, 
-        "tips": 0
+        "tips": 11
       }, 
       "flavors": {
         "sweet": {
@@ -26913,7 +26913,7 @@
         "reviews": 192, 
         "likes": 0, 
         "stars": 773, 
-        "tips": 0
+        "tips": 17
       }, 
       "flavors": {
         "sweet": {
@@ -27026,7 +27026,7 @@
         "reviews": 13, 
         "likes": 0, 
         "stars": 37, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -27241,7 +27241,7 @@
         "reviews": 24, 
         "likes": 0, 
         "stars": 76, 
-        "tips": 0
+        "tips": 4
       }, 
       "flavors": {
         "sweet": {
@@ -27385,7 +27385,7 @@
         "reviews": 51, 
         "likes": 0, 
         "stars": 176, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -27523,7 +27523,7 @@
         "reviews": 98, 
         "likes": 0, 
         "stars": 390, 
-        "tips": 0
+        "tips": 7
       }, 
       "flavors": {
         "sweet": {
@@ -27650,7 +27650,7 @@
         "reviews": 7, 
         "likes": 0, 
         "stars": 26, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -27760,7 +27760,7 @@
         "reviews": 5, 
         "likes": 0, 
         "stars": 15, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -27868,7 +27868,7 @@
         "reviews": 17, 
         "likes": 0, 
         "stars": 81, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -28000,7 +28000,7 @@
         "reviews": 31, 
         "likes": 0, 
         "stars": 88, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -28114,7 +28114,7 @@
         "reviews": 20, 
         "likes": 0, 
         "stars": 46, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -28256,7 +28256,7 @@
         "reviews": 22, 
         "likes": 0, 
         "stars": 80, 
-        "tips": 0
+        "tips": 5
       }, 
       "flavors": {
         "sweet": {
@@ -28409,7 +28409,7 @@
         "reviews": 10, 
         "likes": 0, 
         "stars": 20, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -28553,21 +28553,21 @@
     }, 
     "flavor_sharer": {
       "aggregate": {
-        "count": 18, 
+        "count": 20, 
         "useful_votes": 44, 
         "reviews": 70, 
         "likes": 0, 
         "stars": 286, 
-        "tips": 0
+        "tips": 7
       }, 
       "flavors": {
         "sweet": {
-          "count": 3, 
+          "count": 4, 
           "useful_votes": 2, 
           "reviews": 3, 
           "likes": 0, 
           "stars": 11, 
-          "tips": 0
+          "tips": 1
         }, 
         "salty": {
           "count": 5, 
@@ -28578,12 +28578,12 @@
           "tips": 0
         }, 
         "sour": {
-          "count": 4, 
+          "count": 5, 
           "useful_votes": 1, 
           "reviews": 4, 
           "likes": 0, 
           "stars": 14, 
-          "tips": 0
+          "tips": 1
         }, 
         "bitter": {
           "count": 0, 
@@ -28700,7 +28700,7 @@
         "reviews": 12, 
         "likes": 0, 
         "stars": 31, 
-        "tips": 0
+        "tips": 5
       }, 
       "flavors": {
         "sweet": {
@@ -28850,7 +28850,7 @@
         "reviews": 29, 
         "likes": 0, 
         "stars": 101, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -28994,7 +28994,7 @@
         "reviews": 200, 
         "likes": 0, 
         "stars": 741, 
-        "tips": 0
+        "tips": 21
       }, 
       "flavors": {
         "sweet": {
@@ -29242,7 +29242,7 @@
         "reviews": 44, 
         "likes": 0, 
         "stars": 152, 
-        "tips": 0
+        "tips": 6
       }, 
       "flavors": {
         "sweet": {
@@ -29532,7 +29532,7 @@
         "reviews": 18, 
         "likes": 0, 
         "stars": 70, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -29648,7 +29648,7 @@
         "reviews": 40, 
         "likes": 0, 
         "stars": 143, 
-        "tips": 0
+        "tips": 4
       }, 
       "flavors": {
         "sweet": {
@@ -29793,7 +29793,7 @@
         "reviews": 30, 
         "likes": 0, 
         "stars": 105, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -29941,7 +29941,7 @@
         "reviews": 45, 
         "likes": 0, 
         "stars": 134, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -30193,7 +30193,7 @@
         "reviews": 17, 
         "likes": 0, 
         "stars": 67, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -30336,7 +30336,7 @@
         "reviews": 15, 
         "likes": 0, 
         "stars": 26, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -30495,7 +30495,7 @@
         "reviews": 47, 
         "likes": 0, 
         "stars": 121, 
-        "tips": 0
+        "tips": 5
       }, 
       "flavors": {
         "sweet": {
@@ -30726,7 +30726,7 @@
         "reviews": 8, 
         "likes": 0, 
         "stars": 33, 
-        "tips": 0
+        "tips": 3
       }, 
       "flavors": {
         "sweet": {
@@ -30841,7 +30841,7 @@
         "reviews": 17, 
         "likes": 0, 
         "stars": 70, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -30981,7 +30981,7 @@
         "reviews": 52, 
         "likes": 0, 
         "stars": 205, 
-        "tips": 0
+        "tips": 6
       }, 
       "flavors": {
         "sweet": {
@@ -31189,7 +31189,7 @@
         "reviews": 15, 
         "likes": 0, 
         "stars": 51, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -31340,7 +31340,7 @@
         "reviews": 55, 
         "likes": 0, 
         "stars": 177, 
-        "tips": 0
+        "tips": 5
       }, 
       "flavors": {
         "sweet": {
@@ -31460,7 +31460,7 @@
         "reviews": 44, 
         "likes": 0, 
         "stars": 128, 
-        "tips": 0
+        "tips": 2
       }, 
       "flavors": {
         "sweet": {
@@ -31818,7 +31818,7 @@
         "reviews": 60, 
         "likes": 0, 
         "stars": 234, 
-        "tips": 0
+        "tips": 9
       }, 
       "flavors": {
         "sweet": {
@@ -32166,7 +32166,7 @@
         "reviews": 13, 
         "likes": 0, 
         "stars": 44, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -32461,7 +32461,7 @@
         "reviews": 65, 
         "likes": 0, 
         "stars": 230, 
-        "tips": 0
+        "tips": 6
       }, 
       "flavors": {
         "sweet": {
@@ -32577,7 +32577,7 @@
         "reviews": 20, 
         "likes": 0, 
         "stars": 49, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {
@@ -32848,7 +32848,7 @@
         "reviews": 80, 
         "likes": 0, 
         "stars": 303, 
-        "tips": 0
+        "tips": 10
       }, 
       "flavors": {
         "sweet": {
@@ -33109,7 +33109,7 @@
         "reviews": 20, 
         "likes": 0, 
         "stars": 67, 
-        "tips": 0
+        "tips": 1
       }, 
       "flavors": {
         "sweet": {

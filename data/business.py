@@ -114,6 +114,45 @@ class Business(object):
             aggregate['tips'] += 1
             aggregate['likes'] += likes
 
+        # The dictionary for all 5 tastes
+            flavors = self.business[business_id]['flavor_sharer']['flavors']
+
+            words = text.split(' ')
+            stemmer = PorterStemmer() # salty to salti, spicy to spici
+            #for i in range(len(words)):
+            #    words[i] = stemmer.stem(words[i])
+            words = map(stemmer.stem, words)
+            freqs = dict(Counter(words))
+
+            if 'sweet' in freqs:
+                flavors['sweet']['tips'] += 1
+                flavors['sweet']['likes'] += likes
+                flavors['sweet']['count'] += freqs['sweet']
+                aggregate['count'] += freqs['sweet']
+
+            elif 'salti' in freqs:
+                flavors['salty']['tips'] += 1
+                flavors['salty']['likes'] += likes
+                flavors['salty']['count'] += freqs['salti']
+                aggregate['count'] += freqs['salti']
+
+            elif 'bitter' in freqs:
+                flavors['bitter']['tips'] += 1
+                flavors['bitter']['likes'] += likes
+                flavors['bitter']['count'] += freqs['bitter']
+                aggregate['count'] += freqs['bitter']
+
+            elif 'sour' in freqs:
+                flavors['sour']['tips'] += 1
+                flavors['sour']['likes'] += likes
+                flavors['sour']['count'] += freqs['sour']
+                aggregate['count'] += freqs['sour']
+
+            elif 'spici' in freqs:
+                flavors['spicy']['tips'] += 1
+                flavors['spicy']['likes'] += likes
+                flavors['spicy']['count'] += freqs['spici']
+                aggregate['count'] += freqs['spici']
 
 
     def clean_reviews(self, text):
