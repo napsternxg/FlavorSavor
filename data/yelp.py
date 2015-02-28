@@ -1,10 +1,11 @@
 #!/usr/bin/python
 
 __author__ = 'Xiaodan'
-# Date created: 11/15/2014
+# Date created: 2/28/2015
 
 import json
 import logging
+
 
 from business import Business
 
@@ -33,45 +34,41 @@ class BusinessReviews(Business):
         self.review_file_name = review_file_name
         self.tip_file_name = tip_file_name
 
+
     def load_data(self):
         self.read_business()
         self.read_reviews()
-        self.read_tips()
+        #self.read_tips()
 
     '''
     This method reads businesses data.
-    [u'city', u'review_count', u'name', u'neighborhoods', u'type', 
-    u'business_id', u'full_address', u'hours', u'state', u'longitude', 
+    [u'city', u'review_count', u'name', u'neighborhoods', u'type',
+    u'business_id', u'full_address', u'hours', u'state', u'longitude',
     u'stars', u'latitude', u'attributes', u'open', u'categories']
     '''
     def read_business(self):
 
         gLogger.info( "Reading business items ..." )
         with open(self.business_file_name, 'r') as in_file:
+            count  = 0
             for line in in_file:
                 line_contents = json.loads(line)
                 business_id = line_contents['business_id']
-                business_name = line_contents['name'] 
-                full_address = line_contents['full_address']
+                state = line_contents['state']
+                city = line_contents['city']
                 categories = line_contents['categories']
-                stars = line_contents['stars']
+                restaurant_bool = ("Restaurants" in categories)
+                state_bool = (state == "IL")
+                city_bool = (city in ["Urbana", "Champaign"])
 
                 ## We only need businesses that have "Restaurants" category.
-                # if "Chinese" in categories:
-                if "Dry Cleaning & Laundry" in categories or \
-                    "Automotive" in categories:
-                    self.add_business(business_id, business_name, 
-                                full_address, categories, stars)
-                #if "Japanese" in categories:
-                
-                #if "Dry Cleaning & Laundry" in categories or \
-                #    "Automotive" in categories or "Beauty & Spas" in categories or \
-                #    "Pets" in categories:
-                    
-                
+                if restaurant_bool and state_bool and city_bool:
+                    # line_contents is business_info
+                    self.add_business(business_id, line_contents)
+
     '''
     This method reads reviews data for each business.
-    [u'votes', u'user_id', u'review_id', u'text', u'business_id', 
+    [u'votes', u'user_id', u'review_id', u'text', u'business_id',
     u'stars', u'date', u'type']
     '''
     def read_reviews(self):
@@ -80,14 +77,11 @@ class BusinessReviews(Business):
             for line in in_file:
                 line_contents = json.loads(line)
                 business_id = line_contents['business_id']
-                user_id = line_contents['user_id']
-                review_id = line_contents['review_id']
                 text = line_contents['text']
                 stars = line_contents['stars']
-                date = line_contents['date']
+                useful_votes = line_contents['votes']['useful']
 
-                self.add_reviews(business_id, user_id, review_id,
-                                text, stars, date)
+                self.add_reviews(business_id, text, stars, useful_votes)
 
     '''
     This method reads tips data for each business.
@@ -99,41 +93,44 @@ class BusinessReviews(Business):
             for line in in_file:
                 line_contents = json.loads(line)
                 business_id = line_contents['business_id']
-                user_id = line_contents['user_id']
                 text = line_contents['text']
-                date = line_contents['date']
+                likes = line_contents['likes']
 
-                self.add_tips(business_id, user_id, text, date)
+                self.add_tips(business_id, text, likes)
 
     '''
     This method writes out a file in JSON format.
     '''
-    def writeAsJSONFormat(self, json_outfile_name):
+    def writeAsJSONFormat(self, json_outfile_name, middle_file = False):
         result = []
-        for business_id, business_data in self.business.iteritems():
-            if len(business_data['reviews']) > 0:
-                result.append(business_data)
+        for business_id, business_info in self.business.iteritems():
+            if middle_file or len(business_info['reviews']) > 0:
+                result.append(business_info)
             else:
                 print "NO reviews EXISTED"
 
-        print len(result) # 14257
+        print len(result)
 
         # Write out the JSON data to a .json file.
         gLogger.info( "Writing '%s'..." % json_outfile_name )
-        
+
         with open(json_outfile_name, 'w') as outfile:
             json.dump( result, outfile, indent=2 )
-            
+
         return
+
+
+
 
 if __name__ == '__main__':
     bs = BusinessReviews()
+
     bs.load_data()
     """
-    grep "\"Restaurants\"" yelp_academic_dataset_business.json | wc -l => 14303
+    grep "\"Restaurants\"" yelp_academic_dataset_business.json | wc -l => 21892
     """
-    print len(bs.business) # 14303
-    bs.writeAsJSONFormat('data/yelp_ref_business_reviews.json')
-    # bs.writeAsJSONFormat('yelp_Chinese_business_reviews.json')
+    # print len(bs.business) # 21892 total number of restaurants
+
+    bs.writeAsJSONFormat('yelp_business_urbana_champaign_il.json', True)
 
 
