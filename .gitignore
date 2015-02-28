@@ -1,3 +1,5 @@
+config.py
+
 .DS_Store
 data/*.json
 # Byte-compiled / optimized / DLL files
