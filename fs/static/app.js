@@ -1,7 +1,64 @@
-// Create the Google Map
+// Create the Google Map
+var map;
+
+var marker_colors = {"default": "444444","sweet": "803b66","salty": "ffde00","sour": "69bd45",
+    "bitter": "5c8290", "spicy": "f05231"};
+
+var flavor_colors = ["default","sweet","salty","sour","bitter", "spicy"];
+
+var get_val = function(d,f){
+    return d.flavor_sharer.flavors[f].reviews;
+};
+
+var m_color = function(d){
+    arr = [0,get_val(d,"sweet"),get_val(d,"salty"),get_val(d,"sour"),get_val(d,"bitter"), get_val(d,"spicy")];
+    return marker_colors[flavor_colors[arr.indexOf(d3.max(arr))]];
+};
+var m_info = function(d){
+    return "<h3>"+d.name+"</h3>";
+}
+var infowindow;
+//This function will add a marker to the map each time it
+//is called.  It takes latitude, longitude, and html markup
+//for the content you want to appear in the info window
+//for the marker.
+function addMarkerToMap(d){
+    var myLatLng = new google.maps.LatLng(d.latitude, d.longitude);
+    var m_id = d.business_id;
+    var info = m_info(d);
+    var pinColor = m_color(d) ;
+    var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
+        new google.maps.Size(21, 34),
+        new google.maps.Point(0,0),
+        new google.maps.Point(10, 34));
+    var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
+        new google.maps.Size(40, 37),
+        new google.maps.Point(0, 0),
+        new google.maps.Point(12, 35));
+    var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        icon: pinImage,
+        shadow: pinShadow,
+        animation: google.maps.Animation.DROP,
+    });
+    //Creates the event listener for clicking the marker
+    //and places the marker on the map
+    google.maps.event.addListener(marker, "click", function() {
+      if (infowindow) infowindow.close();
+      infowindow = new google.maps.InfoWindow({content: info});
+      infowindow.open(map, marker);
+    }); 
+     
+    //Pans map to the new location of the marker
+    //map.panTo(myLatLng)
+    return marker;
+}
+
+
 function initialize(){
     var markers = [];
-    var map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById('map'), {
     mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
@@ -69,64 +126,13 @@ function initialize(){
     // Load the station data. When the data comes back, create an overlay.
     d3.json("/static/yelp_business_urbana_champaign_il.json", function(data) {
       var overlay = new google.maps.OverlayView();
-        var flavor_colors = ["sweet","salty","sour","bitter", "spicy"];
-
-      // Add the container when the overlay is added to the map.
-      overlay.onAdd = function() {
-        var layer = d3.select(this.getPanes().overlayLayer).append("div")
-            .attr("class", "stations");
-
-        // Draw each marker as a separate SVG element.
-        // We could use a single SVG, but what size would it have?
-        overlay.draw = function() {
-          var projection = this.getProjection(),
-              padding = 10;
-
-          var marker = layer.selectAll("svg")
-              .data(data)
-              .each(transform) // update existing markers
-            .enter().append("svg:svg")
-              .each(transform)
-              .attr("class", "marker");
-        r = d3.scale.log().domain([1,500]).range([1.0,8.0]);
-        get_val = function(d,f){
-            return d.flavor_sharer.flavors[f].reviews;
-        };
-          // Add a circle.
-          marker.append("svg:circle")
-              .attr("r", function(d){
-                return r(d.flavor_sharer.aggregate.reviews+1);
-            })
-              .attr("cx", padding)
-              .attr("cy", padding)
-                .attr("class", function(d){
-               arr = [get_val(d,"sweet"),get_val(d,"salty"),get_val(d,"sour"),get_val(d,"bitter"), get_val(d,"spicy")];
-               return flavor_colors[arr.indexOf(d3.max(arr))];
-});
-
-          // Add a label.
-          marker.append("svg:text")
-              .attr("x", padding + 7)
-              .attr("y", padding)
-              .attr("dy", ".31em")
-              .text(function(d) { return d.name; });
-
-          function transform(d) {
-            d = new google.maps.LatLng(d.latitude, d.longitude);
-            d = projection.fromLatLngToDivPixel(d);
-            return d3.select(this)
-                .style("left", (d.x - padding) + "px")
-                .style("top", (d.y - padding) + "px");
-          }
-        };
-      };
-
-      // Bind our overlay to the map
-      overlay.setMap(map);
+        data.forEach(function(d){
+            addMarkerToMap(d);
+        });
       var center = new google.maps.LatLng(data[0].latitude,data[1].longitude);
         // using global variable:
       map.panTo(center);
-      map.setZoom(20);
+      map.setZoom(15);
     });
 }
 
