@@ -131,6 +131,6 @@ if __name__ == '__main__':
     """
     # print len(bs.business) # 21892 total number of restaurants
 
-    bs.writeAsJSONFormat('yelp_business_lasvegas_nv.json', True)
+    bs.writeAsJSONFormat('yelp_business_waterloo_on.json', True)
 
 
