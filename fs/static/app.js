@@ -64,13 +64,17 @@ function addMarkerToMap(d){
     //console.log("container",container);
     var node = $(document.createElement('div')).addClass("charts");
     $(container).append($(node));
-    $(container).append($("#share-template").clone().addClass("show-share"));
+    $(container).append($("#share-template").clone().addClass("show-share").attr("data-name",d.name));
+    $(container).find("#review").eq(0).val("Eating at "+d.name+" #FlavorSavor ");
     //addEvents(container)
 
     //Creates the event listener for clicking the marker
     //and places the marker on the map
     google.maps.event.addListener(marker, "click", function() {
-      if (infowindow) infowindow.close();
+      if (infowindow){
+          infowindow.close();
+        $(document).off(".btn");
+      }
        var data_arr = [
                ["Rating"], ["Counts"], ["Reviews"], ["Tips"], ["Useful Votes"], ["Likes"], ["Stars"]];
        for(i = 1; i < flavor_colors.length; i++){ // start from 1 because of default
@@ -99,10 +103,27 @@ function addMarkerToMap(d){
       infowindow = new google.maps.InfoWindow({content: container[0]});
       infowindow.open(map, marker);
         google.maps.event.addListener(infowindow, 'domready', function(){ 
-                     //jQuery code here 
-            $(document).on('click', ".share .buttons", function (e) {
+                     //jQuery code here
+            
+            console.log("InfoWindow Context", $(document, infowindow));
+            console.log("InfoWindow Content", $(infowindow.getContent()));
+            console.log("InfoWindow Only Content", $(infowindow));
+            $(document, infowindow).find(".share .buttons").each(function(i,t){
+                t.onclick = function (e) {
                 var elem = $(e.target);
                 var cntrl = "#"+elem.text();
+                console.log(elem, elem.text());
+                var review = $(e.target).siblings("#review").eq(0);
+                var result = review.val() + cntrl + " ";
+                if (result.length <= review.attr('maxlength')) {
+                    review.val(result);
+                    updateCountdown(e);
+                }
+            }});
+            /**$(document, infowindow).on('click', ".share .buttons", function (e) {
+                var elem = $(e.target);
+                var cntrl = "#"+elem.text();
+                console.log(elem, elem.text());
                 var review = $(e.target).siblings("#review").eq(0);
                 var result = review.val() + cntrl + " ";
                 if (result.length <= review.attr('maxlength')) {
@@ -110,7 +131,7 @@ function addMarkerToMap(d){
                     updateCountdown(e);
                 }
 
-            });
+            });**/
             $(document).on('change','.share #review',updateCountdown);
             $(document).on('keyup','.share #review',updateCountdown);
             $(document).on('click','.share .twitter-share',function(e){
@@ -120,6 +141,7 @@ function addMarkerToMap(d){
                 var url = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text);
                 $(e.target).attr('href',url);
             });
+            $(document, '.share #review').trigger('change');
         }); 
     }); 
      
