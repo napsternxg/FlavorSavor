@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Share your FlavorIdeas to twitter</title>
+    <script type="text/javascript" src="jquery.js"></script>
+
+</head>
+<style>
+
+</style>
+
+<script>
+    function updateCountdown() {
+        // 140 is the max message length
+        var remaining = 140 - $('#review').val().length;
+        $('.countdown').text(remaining + ' characters remaining');
+    }
+
+    jQuery(document).ready(function() {
+        updateCountdown();
+        $(".buttons").click(function (e) {
+            var cntrl = $(e.target).html();
+            var result = $("#review").val() + cntrl + " ";
+            if (result.length <= $("#review").attr('maxlength')) {
+                $("#review").val(result);
+                updateCountdown();
+            }
+
+        });
+        $('#review').change(updateCountdown);
+        $('#review').keyup(updateCountdown);
+
+        // Only update once. URL encoding requied.
+        $(".twitter-share").click(function(e){
+            var text = "https://twitter.com/intent/tweet?text=" + encodeURIComponent($('#review').val());
+            console.log(text);
+            $('.twitter-share').attr('href',text);
+        });
+
+    });
+
+</script>
+<body>
+    <textarea id="review" placeholder="Enter your FlavorSavor reviews here...(140 chars maximum)" rows="4" cols="80" maxlength="140">&#35;FlavorSavor </textarea>
+    <span class="countdown"></span><br>
+    <button class="buttons">&#35;Sweet</button>
+    <button class="buttons">&#35;Sour</button>
+    <button class="buttons">&#35;Salty</button>
+    <button class="buttons">&#35;Spicy</button>
+    <button class="buttons">&#35;Bitter</button>
+    <button class="buttons">&#35;GoodService</button>
+    <button class="buttons">&#35;PoorService</button><br>
+    <button class="buttons">&#35;Lunch</button>
+    <button class="buttons">&#35;Dinner</button>
+    <button class="buttons">&#35;Drink</button><br>
+    <input type="checkbox" name="twitter" value="Tweet" checked>
+    Share to Twitter<br>
+    <a class="twitter-share" href="" target="_blank"><input type="submit" value="Submit"></a>
+    <!-- > Twitter button doesn't work here: can't update the data-text field -->
+    <!-- <a href="http://twitter.com/share" class="twitter-share-button" data-url="none" data-text="Sample" data-count="none" data-related="none">Tweet</a> -->
+
+</body>
+</html>
