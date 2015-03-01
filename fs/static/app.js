@@ -32,6 +32,7 @@ var m_color = function(arr){
 var m_info = function(d){
     return "<h3>"+d.name+"</h3>";
 }
+
 var infowindow;
 //This function will add a marker to the map each time it
 //is called.  It takes latitude, longitude, and html markup
@@ -59,33 +60,17 @@ function addMarkerToMap(d){
         shadow: pinShadow,
         animation: google.maps.Animation.DROP,
     });
-    var node = document.createElement('div');
+    var container = $(document.createElement('div')).addClass("info-window")
+    //console.log("container",container);
+    var node = $(document.createElement('div')).addClass("charts");
+    $(container).append($(node));
+    $(container).append($("#share-template").clone().addClass("show-share"));
+    //addEvents(container)
+
     //Creates the event listener for clicking the marker
     //and places the marker on the map
     google.maps.event.addListener(marker, "click", function() {
       if (infowindow) infowindow.close();
-      /**
-       var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Topping');
-            data.addColumn('number', 'Slices');
-            data.addRows([
-              ['Sweet', arr[1]],
-              ['Salty', arr[2]],
-              ['Sour', arr[3]],
-              ['Bitter', arr[4]],
-              ['Spicy', arr[5]]
-            ]);
-         // Set chart options
-        var options = {'title':"Flavor Ratings of "+ d.name,
-            'width':400,
-            'height':200,
-            'pieHole': 0.4,
-            'colors' :["#803b66", "#ffde00", "#69bd45", "#5c8290", "#f05231"],
-            'pieSliceTextStyle': {color: "black", fontSize: 12},
-            'legend': {'position': 'bottom'},
-        };
-        var chart = new google.visualization.PieChart(node);
-        **/
        var data_arr = [
                ["Rating"], ["Counts"], ["Reviews"], ["Tips"], ["Useful Votes"], ["Likes"], ["Stars"]];
        for(i = 1; i < flavor_colors.length; i++){ // start from 1 because of default
@@ -109,10 +94,33 @@ function addMarkerToMap(d){
             'legend': { position: 'bottom', maxLines: 3 },
 
         };
-        var chart = new google.visualization.BarChart(node);
+        var chart = new google.visualization.BarChart(node[0]);
         chart.draw(data,options); 
-      infowindow = new google.maps.InfoWindow({content: node});
+      infowindow = new google.maps.InfoWindow({content: container[0]});
       infowindow.open(map, marker);
+        google.maps.event.addListener(infowindow, 'domready', function(){ 
+                     //jQuery code here 
+            $(document).on('click', ".share .buttons", function (e) {
+                var elem = $(e.target);
+                var cntrl = "#"+elem.text();
+                var review = $(e.target).siblings("#review").eq(0);
+                var result = review.val() + cntrl + " ";
+                if (result.length <= review.attr('maxlength')) {
+                    review.val(result);
+                    updateCountdown(e);
+                }
+
+            });
+            $(document).on('change','.share #review',updateCountdown);
+            $(document).on('keyup','.share #review',updateCountdown);
+            $(document).on('click','.share .twitter-share',function(e){
+                var review = $(e.target).parent().find('#review');
+                var text = $(review).val();
+                console.log($(e.target),review,text);
+                var url = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text);
+                $(e.target).attr('href',url);
+            });
+        }); 
     }); 
      
     //Pans map to the new location of the marker
@@ -123,18 +131,22 @@ function addMarkerToMap(d){
 
 function initialize(){
     var markers = [];
-    map = new google.maps.Map(document.getElementById('map'), {
+    //var map_div = $("#map")[0];
+    var map_div = document.getElementById("map");
+    console.log(map_div);
+    map = new google.maps.Map(map_div, {
     mapTypeId: google.maps.MapTypeId.ROADMAP
     });
-
     var defaultBounds = new google.maps.LatLngBounds(
       new google.maps.LatLng(-33.8902, 151.1759),
       new google.maps.LatLng(-33.8474, 151.2631));
     map.fitBounds(defaultBounds);
 
     // Create the search box and link it to the UI element.
-    var input = /** @type {HTMLInputElement} */(
-      document.getElementById('pac-input'));
+    //var input = /** @type {HTMLInputElement} */(
+    //    $("#pac-input")[0]);
+    var input = document.getElementById("pac-input");
+    console.log(input);
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
     var searchBox = new google.maps.places.SearchBox(
@@ -201,4 +213,19 @@ function initialize(){
     });
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+function updateCountdown(e) {
+    // 140 is the max message length
+    console.log("Event Target", $(e.target).parent());
+    var review = $(e.target).parent().find('#review');
+    var countdown = $(e.target).parent().find('.countdown').eq(0);
+    var remaining = 140 - $(review).val().length;
+    $(countdown).text(remaining + ' characters remaining');
+}
+
+$(document).ready(function() {
+    //updateCountdown();
+    initialize();
+    //google.maps.event.addDomListener(window, 'load', initialize);
+
+});
+

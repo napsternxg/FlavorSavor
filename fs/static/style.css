@@ -1,4 +1,4 @@
-html, body, #map {
+html, body, #wrapper, #map, #map-elements {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -22,6 +22,36 @@ html, body, #map {
   stroke-width: 1.5px;
 }
 
+
+.buttons.sweet,
+.buttons.sweet:hover,
+.buttons.sweet:focus,
+.buttons.sweet:active,
+.buttons.sweet.active,
+.open .dropdown-toggle.buttons.sweet{
+  background-color: #803b66; /*  #aabbff */
+}
+
+.buttons.sweet:active,
+.buttons.sweet.active,
+.open .dropdown-toggle.buttons.sweet {
+      background-image: none;
+}
+
+.buttons.bitter {
+  background-color: #5c8290; /* #aaaa44 */
+}
+.buttons.sour {
+  background-color: #69bd45; /* #11ff33 */
+}
+.buttons.salty {
+  background-color: #ffde00; /* #ffff00 */
+}
+
+
+a.twitter-share {
+}
+
 .stations circle.spicy {
   fill: #f05231; /* #ff0000 */
 }
@@ -38,6 +68,17 @@ html, body, #map {
   fill: #ffde00; /* #ffff00 */
 }
 
+#share-template{
+}
+.info-window{
+
+}
+.hide-share{
+    display: none;
+}
+.show-share{
+    display: inline;
+}
 html, body, #map-canvas {
     height: 100%;
     margin: 0px;

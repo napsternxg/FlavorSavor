@@ -2,12 +2,45 @@
 <html>
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
     <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/buttons.css">
   </head>
   <body>
+  <div id="wrapper">
+<div id="share-template" class="share hide-share">
+    <textarea id="review" class="form-control" placeholder="Enter your FlavorSavor reviews here...(140 chars maximum)" rows="4" cols="80" maxlength="140">&#35;FlavorSavor </textarea>
+    <span class="countdown"></span><br>
+    <button class="btn btn-sweet buttons sweet">&#35;Sweet</button>
+    <button class="btn btn-sour buttons sour">&#35;Sour</button>
+    <button class="btn btn-salty buttons salty">&#35;Salty</button>
+    <button class="btn buttons btn-spicy">&#35;Spicy</button>
+    <button class="btn btn-bitter buttons bitter">&#35;Bitter</button>
+    <button class="btn btn-success buttons good"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>GoodService</button>
+    <button class="btn btn-danger buttons poor"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>PoorService</button><br>
+    <button class="btn btn-info buttons lunch">&#35;Lunch</button>
+    <button class="btn btn-info buttons dinner">&#35;Dinner</button>
+    <button class="btn btn-info buttons drink">&#35;Drink</button><br>
+    <input type="checkbox" name="twitter" value="Tweet" checked>
+    Share to Twitter<br>
+    <a class="btn btn-default twitter-share" href="" target="_blank">Submit</a>
+    <!-- > Twitter button doesn't work here: can't update the data-text field -->
+    <!-- <a href="http://twitter.com/share" class="twitter-share-button" data-url="none" data-text="Sample" data-count="none" data-related="none">Tweet</a> -->
+    </div>
+    <div id="map-elements">
     <input id="pac-input" class="controls" type="text" placeholder="Search Box">
     <div id="map"></div>
+    </div>
+    </div>
   </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
     <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
