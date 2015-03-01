@@ -23,19 +23,19 @@ html, body, #map {
 }
 
 .stations circle.spicy {
-  fill:#ff0000 ;
+  fill: #f05231; /* #ff0000 */
 }
 .stations circle.sweet {
-  fill:#aabbff ;
+  fill: #803b66; /*  #aabbff */
 }
 .stations circle.bitter {
-  fill:#aaaa44 ;
+  fill: #5c8290; /* #aaaa44 */
 }
 .stations circle.sour {
-  fill:#11ff33 ;
+  fill: #69bd45; /* #11ff33 */
 }
 .stations circle.salty {
-  fill:#ffff00 ;
+  fill: #ffde00; /* #ffff00 */
 }
 
 html, body, #map-canvas {
