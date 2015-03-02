@@ -122,12 +122,24 @@ function addMarkerToMap(d){
             }});
             $(document).on('change','.share #review',updateCountdown);
             $(document).on('keyup','.share #review',updateCountdown);
-            $(document).on('click','.share .twitter-share',function(e){
+            $(document, infowindow).find('.share .twitter-share').each(function(i,t){
+                t.onclick=function(e){
                 var review = $(e.target).parent().find('#review');
                 var text = $(review).val();
-                console.log($(e.target),review,text);
+                console.log(text,d);
+                $.ajax({
+                  type: "POST",
+                  url: "/db",
+                  data: { bid:d.business_id , review: text,
+                         city: d.city, state: d.state,name:d.name }
+                })
+                  .done(function( msg ) {
+                    console.log( "Data Saved: " + msg );
+                  });
+                
                 var url = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text);
                 $(e.target).attr('href',url);
+                }
             });
             $(document, '.share #review').trigger('change');
         }); 

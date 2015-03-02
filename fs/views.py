@@ -1,4 +1,5 @@
 from fs import app
+from fs import dbInterface as dbi
 from flask import render_template
 from flask import request
 
@@ -29,3 +30,12 @@ def login():
 @app.route('/about')
 def about():
    return render_template('about.html')
+@app.route('/db',methods=["GET","POST"])
+def db():
+   print "App Config in DB: ", app.config
+   if request.method == 'POST':
+       resp = dbi.add_review(app.config['PORC_API_KEY'],bid=request.form['bid'],\
+               name=request.form['name'],city=request.form['city'],\
+               state=request.form['state'],review=request.form['review'])
+       return resp
+   return "GET REQUEST"
