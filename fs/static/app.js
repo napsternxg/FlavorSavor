@@ -120,18 +120,6 @@ function addMarkerToMap(d){
                     updateCountdown(e);
                 }
             }});
-            /**$(document, infowindow).on('click', ".share .buttons", function (e) {
-                var elem = $(e.target);
-                var cntrl = "#"+elem.text();
-                console.log(elem, elem.text());
-                var review = $(e.target).siblings("#review").eq(0);
-                var result = review.val() + cntrl + " ";
-                if (result.length <= review.attr('maxlength')) {
-                    review.val(result);
-                    updateCountdown(e);
-                }
-
-            });**/
             $(document).on('change','.share #review',updateCountdown);
             $(document).on('keyup','.share #review',updateCountdown);
             $(document).on('click','.share .twitter-share',function(e){
@@ -151,6 +139,53 @@ function addMarkerToMap(d){
 }
 
 
+/**
+ * The CenterControl adds a control to the map that opens the visualization for the given city.
+ * This constructor takes the control DIV as an argument.
+ * @constructor
+ */
+function CenterControl(controlDiv, map,name,url) {
+
+  // Set CSS for the control border
+  var controlUI = document.createElement('div');
+  controlUI.style.border = '2px solid #fff';
+  controlUI.style.borderRadius = '3px';
+  controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
+  controlUI.style.cursor = 'pointer';
+  controlUI.style.marginBottom = '22px';
+  controlUI.style.marginLeft = '5px';
+  controlUI.style.textAlign = 'center';
+    if(!url){
+    controlUI.style.backgroundColor = '#E7F6FD';
+      controlUI.title = 'Click to see food places in '+name;
+        url = "/"+name.toUpperCase();
+    } else {
+    
+    controlUI.style.backgroundColor = '#FFC2C2';
+      controlUI.title = 'Show Page: '+name;
+}
+  controlDiv.appendChild(controlUI);
+
+  // Set CSS for the control interior
+  var controlText = document.createElement('div');
+  controlText.style.color = 'rgb(25,25,25)';
+  controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
+  controlText.style.fontSize = '16px';
+  controlText.style.lineHeight = '38px';
+  controlText.style.paddingLeft = '5px';
+  controlText.style.paddingRight = '5px';
+  controlText.innerHTML = name;
+  controlUI.appendChild(controlText);
+
+  // Setup the click event listeners: redirect page. 
+  google.maps.event.addDomListener(controlUI, 'click', function() {
+    window.location.href=url;
+  });
+
+}
+
+
+//var DATASET="/static/yelp_business_urbana_champaign_il.json";
 function initialize(){
     var markers = [];
     //var map_div = $("#map")[0];
@@ -163,6 +198,24 @@ function initialize(){
       new google.maps.LatLng(-33.8902, 151.1759),
       new google.maps.LatLng(-33.8474, 151.2631));
     map.fitBounds(defaultBounds);
+    
+    // Create the DIV to hold the control and
+  // call the CenterControl() constructor passing
+  // in this DIV.
+var places = ["Urbana-Champaign","Pittsburg","Las-Vegas"]
+    $.each(places, function(i,p){
+  var centerControlDiv = document.createElement('div');
+  var centerControl = new CenterControl(centerControlDiv, map,p);
+
+  centerControlDiv.index = i+1;
+  map.controls[google.maps.ControlPosition.BOTTOM_LEFT].push(centerControlDiv);
+
+});
+  var centerControlDiv = document.createElement('div');
+  var centerControl = new CenterControl(centerControlDiv, map,"About Us","/about");
+
+  centerControlDiv.index = places.length+1;
+  map.controls[google.maps.ControlPosition.BOTTOM_LEFT].push(centerControlDiv);
 
     // Create the search box and link it to the UI element.
     //var input = /** @type {HTMLInputElement} */(
@@ -220,18 +273,21 @@ function initialize(){
     var bounds = map.getBounds();
     searchBox.setBounds(bounds);
     });
-    
+   var bounds = new google.maps.LatLngBounds(); 
     console.log("Loading application")
     // Load the station data. When the data comes back, create an overlay.
-    d3.json("/static/yelp_business_urbana_champaign_il.json", function(data) {
+    d3.json(DATASET, function(data) {
       var overlay = new google.maps.OverlayView();
         data.forEach(function(d){
             addMarkerToMap(d);
+            bounds.extend(new google.maps.LatLng(d.latitude,d.longitude));
         });
-      var center = new google.maps.LatLng(data[0].latitude,data[1].longitude);
+        
+      var center = bounds.getCenter();
         // using global variable:
-      map.panTo(center);
-      map.setZoom(15);
+        map.fitBounds(bounds);
+        map.panTo(center);
+      //map.setZoom(15);
     });
 }
 
