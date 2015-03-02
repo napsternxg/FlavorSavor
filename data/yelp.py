@@ -58,8 +58,8 @@ class BusinessReviews(Business):
                 city = line_contents['city']
                 categories = line_contents['categories']
                 restaurant_bool = ("Restaurants" in categories)
-                state_bool = (state == "IL")
-                city_bool = (city in ["Urbana", "Champaign"])
+                state_bool = (state == "NV")
+                city_bool = (city == "Las Vegas") #(city in ["Urbana", "Champaign"])
 
                 ## We only need businesses that have "Restaurants" category.
                 if restaurant_bool and state_bool and city_bool:
@@ -131,6 +131,6 @@ if __name__ == '__main__':
     """
     # print len(bs.business) # 21892 total number of restaurants
 
-    bs.writeAsJSONFormat('yelp_business_urbana_champaign_il.json', True)
+    bs.writeAsJSONFormat('yelp_business_lasvegas_nv.json', True)
 
 
