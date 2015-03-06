@@ -21,19 +21,31 @@ var get_val = function(d,f){
     return d.flavor_sharer.flavors[f].count;
 };
 
-var m_color = function(arr){
+var m_pinImage = function(arr){
     var max_val = d3.max(arr);
     var index_max = arr.indexOf(max_val);
     var max_flavor = flavor_colors[index_max];
-    var max_color = marker_colors[max_flavor];
+    var max_pin = pinImages[max_flavor];
     //console.log("Arr", arr, "MAX", max_val, "Flavor", max_flavor, "Color", max_color);
-    return max_color;
+    return max_pin;
 };
 var m_info = function(d){
     return "<h3>"+d.name+"</h3>";
 }
 
 var infowindow;
+var pinImages = {};
+for(i = 0; i < flavor_colors.length; i++){
+    var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + marker_colors[flavor_colors[i]],
+        new google.maps.Size(21, 34),
+        new google.maps.Point(0,0),
+        new google.maps.Point(10, 34));
+    pinImages[flavor_colors[i]] = pinImage;
+}
+var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
+    new google.maps.Size(40, 37),
+    new google.maps.Point(0, 0),
+    new google.maps.Point(12, 35));
 //This function will add a marker to the map each time it
 //is called.  It takes latitude, longitude, and html markup
 //for the content you want to appear in the info window
@@ -44,15 +56,7 @@ function addMarkerToMap(d){
     var info = m_info(d);
     //console.log("Business: ", d.name);
     var arr = [0,get_val(d,"sweet"),get_val(d,"salty"),get_val(d,"sour"),get_val(d,"bitter"), get_val(d,"spicy")];
-    var pinColor = m_color(arr) ;
-    var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
-        new google.maps.Size(21, 34),
-        new google.maps.Point(0,0),
-        new google.maps.Point(10, 34));
-    var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
-        new google.maps.Size(40, 37),
-        new google.maps.Point(0, 0),
-        new google.maps.Point(12, 35));
+    var pinImage = m_pinImage(arr) ;
     var marker = new google.maps.Marker({
         position: myLatLng,
         map: map,
