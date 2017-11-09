@@ -228,7 +228,7 @@ var places = ["Urbana-Champaign","Pittsburg","Las-Vegas"]
 
 });
   var centerControlDiv = document.createElement('div');
-  var centerControl = new CenterControl(centerControlDiv, map,"About Us","/about");
+  var centerControl = new CenterControl(centerControlDiv, map,"About Us","./about");
 
   centerControlDiv.index = places.length+1;
   map.controls[google.maps.ControlPosition.BOTTOM_LEFT].push(centerControlDiv);
