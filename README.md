@@ -1,4 +1,4 @@
-# FlavorSharer
+# FlavorSavor
 Find and review restaurants based on flavor
 =================================
 Installation steps:
