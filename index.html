@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Flavor Savor: {{ place }}</title>
+    <title>Flavor Savor: </title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
     <link rel="image_src" href="./static/FlavorSavor_Demo-UIUC.PNG" / ><!--formatted-->
     <meta property="fb:admins" content="631056433" />
@@ -51,11 +51,31 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWUSTefVTxkDsrUhdQCiiW1E19YyVA2xo" type="text/javascript"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWUSTefVTxkDsrUhdQCiiW1E19YyVA2xo&v=3.exp&signed_in=true&libraries=places" type="text/javascript"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script> -->
     <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script>
-    var DATASET="./static/{{ place_url }}";
+    function getParameterByName(name, url) {
+        // Taken from https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    var PLACE_URLS = {
+        "URBANA-CHAMPAIGN": "yelp_business_urbana_champaign_il.json",
+        "PITTSBURG": "yelp_business_pittsburgh_pa.json",
+        "LAS-VEGAS": "yelp_business_lasvegas_nv.json" 
+    }
+    var place_var = getParameterByName("place");
+    if(place_var == null) {
+        place_var = "URBANA-CHAMPAIGN";
+    }
+    document.title = "Flavor Savor: "+place_var;
+    var DATASET="./static/"+PLACE_URLS[place_var];
 </script>
     <script type="text/javascript" src="./static/app.js"></script>
     <script>

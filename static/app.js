@@ -174,7 +174,7 @@ function CenterControl(controlDiv, map,name,url) {
     if(!url){
     controlUI.style.backgroundColor = '#E7F6FD';
       controlUI.title = 'Click to see food places in '+name;
-        url = "/"+name.toUpperCase();
+        url = "./index.html?place="+name.toUpperCase();
     } else {
     
     controlUI.style.backgroundColor = '#FFC2C2';
@@ -228,7 +228,7 @@ var places = ["Urbana-Champaign","Pittsburg","Las-Vegas"]
 
 });
   var centerControlDiv = document.createElement('div');
-  var centerControl = new CenterControl(centerControlDiv, map,"About Us","./about");
+  var centerControl = new CenterControl(centerControlDiv, map,"About Us","./about.html");
 
   centerControlDiv.index = places.length+1;
   map.controls[google.maps.ControlPosition.BOTTOM_LEFT].push(centerControlDiv);
